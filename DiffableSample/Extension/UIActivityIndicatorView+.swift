@@ -6,4 +6,20 @@
 //  Copyright © 2019 Takuma Osada. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+extension UIActivityIndicatorView {
+    var animatable: Bool  {
+        set {
+            if (newValue) {
+                startAnimating()
+            } else {
+                stopAnimating()
+            }
+        }
+
+        get {
+            return isAnimating
+        }
+    }
+}
